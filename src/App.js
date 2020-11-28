@@ -4,15 +4,18 @@ import CreateTweet from "./components/CreateTweet";
 import TweetList from "./components/TweetList";
 
 function App() {
-  const [tweet, setTweet] = useState("");
-  const name = "Matej Kuchar";
-  const message =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, aspernatur?";
+  const [tweets, setTweets] = useState([]);
+  const [inputText, setInputText] = useState("");
 
   return (
     <div className="App">
-      <CreateTweet></CreateTweet>
-      <TweetList message={message} name={name} />
+      <CreateTweet
+        inputText={inputText}
+        setInputText={setInputText}
+        tweets={tweets}
+        setTweets={setTweets}
+      ></CreateTweet>
+      <TweetList tweets={tweets} />
     </div>
   );
 }
