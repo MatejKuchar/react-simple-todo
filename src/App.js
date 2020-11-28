@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Todo app</h1>
       <CreateTweet
         inputText={inputText}
         setInputText={setInputText}
