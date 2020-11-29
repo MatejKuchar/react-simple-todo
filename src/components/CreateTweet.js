@@ -16,6 +16,7 @@ const CreateTweet = ({ tweets, setTweets, inputText, setInputText }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <textarea
+          className="bg-gray-500 rounded shadow-xl p-4 focus:outline-none  text-gray-100 placeholder-gray-300"
           value={inputText}
           onChange={inputHandler}
           id=""
@@ -24,7 +25,9 @@ const CreateTweet = ({ tweets, setTweets, inputText, setInputText }) => {
           placeholder="add text..."
         ></textarea>
         <br />
-        <button>Submit</button>
+        <button className="bg-green-500 px-3 py-2 focus:outline-none font-semibold rounded text-gray-100	border-b-2 border-green-800">
+          Submit
+        </button>
       </form>
     </div>
   );

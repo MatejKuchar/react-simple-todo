@@ -3,13 +3,15 @@ import { useState } from "react";
 import CreateTweet from "./components/CreateTweet";
 import TweetList from "./components/TweetList";
 
+import "./tailwind.generated.css";
+
 function App() {
   const [tweets, setTweets] = useState([]);
   const [inputText, setInputText] = useState("");
 
   return (
     <div className="App">
-      <h1>Todo app</h1>
+      <h1 className="text-red-500">Todo app</h1>
       <CreateTweet
         inputText={inputText}
         setInputText={setInputText}
