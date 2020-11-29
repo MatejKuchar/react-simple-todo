@@ -1,10 +1,14 @@
 import React from "react";
 
-const Tweet = ({ name }) => {
+const Tweet = ({ tweet, tweets, setTweets }) => {
+  const delteTweet = () => {
+    setTweets(tweets.filter((t) => t.id !== tweet.id));
+  };
+
   return (
     <div>
-      <h2>{name}</h2>
-      <button>Delete</button>
+      <p>{tweet.message}</p>
+      <button onClick={delteTweet}>Delete</button>
       <button>Like</button>
     </div>
   );

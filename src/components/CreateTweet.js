@@ -8,7 +8,7 @@ const CreateTweet = ({ tweets, setTweets, inputText, setInputText }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setTweets([...tweets, { name: inputText, id: uuid() }]);
+    setTweets([...tweets, { message: inputText, id: uuid() }]);
     setInputText("");
   };
 
